@@ -5,17 +5,18 @@
   --Medium-Grey: hsl(216, 12%, 54%);
   --Dark-Blue: hsl(213, 19%, 18%);
   --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Shadow: rgba(0, 0, 0, 0.3);
+  --Very-transparent-white: rgba(255, 255, 255, 0.05);
 }
 
 body {
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: var(--Very-Dark-Blue);
   font-family: 'Overpass', sans-serif;
-  font-size: 15px;
+  font-size: 0.938rem;
 }
 
 .first-page {
@@ -31,10 +32,11 @@ main {
   justify-content: space-around;
   border-radius: 2rem;
   background-color: var(--Dark-Blue);
-  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0rem 1rem 1rem var(--Shadow);
 }
 
-h1 {
+h1, 
+h2 {
   font-size: 2rem;
   color: var(--White);
   margin: 0;
@@ -53,7 +55,7 @@ p {
 svg {
   padding: 1rem;
   border-radius: 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--Very-transparent-white);
 }
 
 .rating-container {
@@ -67,7 +69,7 @@ svg {
   border-radius: 3rem;
   border: 0;
   color: var(--Light-Grey);
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--Very-transparent-white);
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
   cursor: pointer;
@@ -76,17 +78,12 @@ svg {
 
 .rating-button:hover {
   background-color: var(--Light-Grey);
-  color: white;
+  color: var(--White);
 }
 
-.rating-button:focus {
+.focused {
   background-color: var(--Orange);
-  color: white;
-}
-
-.submit-container {
-  display: flex;
-  justify-content: space-between;
+  color: var(--White);
 }
 
 .submit-button {
@@ -95,7 +92,7 @@ svg {
   background: var(--Orange);
   border: 0;
   border-radius: 3rem;
-  color: white;
+  color: var(--White);
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -105,7 +102,7 @@ svg {
 }
 
 .submit-button:hover {
-  background-color: white;
+  background-color: var(--White);
   color: var(--Orange);
 }
 
@@ -119,12 +116,12 @@ svg {
 }
 
 .summary-image {
-  width: 50%;
+  min-width: 50%;
   padding: 1rem;
 }
 
 .summary {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--Very-transparent-white);
   color: var(--Orange);
   padding: 1rem;
   border-radius: 2rem;
@@ -132,5 +129,5 @@ svg {
 
 .highlight {
   background-color: var(--Orange);
-  color: white;
+  color: var(--White);
 }
